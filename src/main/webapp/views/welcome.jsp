@@ -7,6 +7,12 @@
 <title>IT16310</title>
 </head>
 <body>
-	<h3>Hello IT16310</h3>
+	<form method="GET"
+		action="/SP22B2_SOF3011_IT16310/HelloServlet">
+		<label>Họ tên</label>
+		<input type="text" name="ho_ten" />
+		<button>Gửi</button>
+	</form>
+	<h3>Hello ${ name }</h3>
 </body>
 </html>
