@@ -67,4 +67,14 @@ public class UserDAO {
 			throw e;
 		}
 	}
+
+	public User findByEmail(String email) {
+		String jpql = "SELECT obj FROM User obj "
+				+ "WHERE obj.email = :email";
+		TypedQuery<User> query = this.em
+			.createQuery(jpql, User.class);
+		query.setParameter("email", email);
+		
+		return query.getSingleResult();
+	}
 }
